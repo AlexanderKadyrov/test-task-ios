@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoViewController_iPhone">
             <connections>
+                <outlet property="collectionView" destination="0cr-hp-A9M" id="ck7-fu-jyX"/>
                 <outlet property="view" destination="iN0-l3-epB" id="dad-CL-TUl"/>
             </connections>
         </placeholder>
@@ -14,7 +15,27 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0cr-hp-A9M" userLabel="collectionView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gGu-F6-m1p">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="fFe-FW-QDh"/>
+                        <outlet property="delegate" destination="-1" id="FrR-z3-Exh"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="0cr-hp-A9M" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CRL-ay-NBd"/>
+                <constraint firstAttribute="bottom" secondItem="0cr-hp-A9M" secondAttribute="bottom" id="P6H-Lf-6WH"/>
+                <constraint firstAttribute="trailing" secondItem="0cr-hp-A9M" secondAttribute="trailing" id="PQW-7A-7co"/>
+                <constraint firstItem="0cr-hp-A9M" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bxl-fc-JdY"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>

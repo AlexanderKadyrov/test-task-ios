@@ -7,7 +7,12 @@
 //
 
 #import "ViewController.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 
-@interface PhotoViewController : ViewController
+@interface PhotoViewController : ViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout> {
+    IBOutlet UICollectionView *collectionView;
+    ALAssetsLibrary *assetsLibrary;
+    NSMutableArray *list;
+}
 
 @end

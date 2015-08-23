@@ -16,6 +16,7 @@
 		11B3CFA01B8A4F8300A176AC /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3CF9F1B8A4F8300A176AC /* PhotoViewController.m */; };
 		11B3CFA31B8A4FF400A176AC /* PhotoViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3CFA21B8A4FF400A176AC /* PhotoViewController_iPhone.m */; };
 		11B3CFA81B8A506C00A176AC /* PhotoViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B3CFA71B8A506C00A176AC /* PhotoViewController_iPhone.xib */; };
+		11B3CFAA1B8A567900A176AC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B3CFA91B8A567900A176AC /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		11B3CFA11B8A4FF400A176AC /* PhotoViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController_iPhone.h; sourceTree = "<group>"; };
 		11B3CFA21B8A4FF400A176AC /* PhotoViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController_iPhone.m; sourceTree = "<group>"; };
 		11B3CFA71B8A506C00A176AC /* PhotoViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController_iPhone.xib; sourceTree = "<group>"; };
+		11B3CFA91B8A567900A176AC /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B3CFAA1B8A567900A176AC /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +74,7 @@
 		11B3CF5D1B8978D000A176AC = {
 			isa = PBXGroup;
 			children = (
+				11B3CFA91B8A567900A176AC /* AssetsLibrary.framework */,
 				11B3CF681B8978D000A176AC /* Test */,
 				11B3CF821B8978D000A176AC /* TestTests */,
 				11B3CF671B8978D000A176AC /* Products */,
