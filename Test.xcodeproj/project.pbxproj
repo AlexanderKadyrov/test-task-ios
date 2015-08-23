@@ -117,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				11B3CF931B8A487500A176AC /* Shared */,
-				11B3CF971B8A4AB500A176AC /* Controller */,
 				11B3CF901B89797000A176AC /* Classes */,
 				11B3CF941B8A49D500A176AC /* Resources */,
 			);
@@ -127,6 +126,7 @@
 		11B3CF901B89797000A176AC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				11B3CF971B8A4AB500A176AC /* Controller */,
 				11B3CF911B8979B500A176AC /* ViewController */,
 			);
 			path = Classes;
