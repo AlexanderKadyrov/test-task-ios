@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MainController.h"
+#import "PhotoViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +20,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    PhotoViewController *controller = [MainController getViewController:@"PhotoViewController"];
+    
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:controller];
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
