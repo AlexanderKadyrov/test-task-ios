@@ -10,14 +10,8 @@
 
 @implementation PhotoCollectionViewCell
 
-/*
 - (void)setAsset:(ALAsset *)asset {
-    self.asset = asset;
-    
-    imageViewPhoto.image = [UIImage imageWithCGImage:[asset thumbnail]];
-}*/
-
-- (void)setAsset:(ALAsset *)asset {
+    _asset = asset;
     imageViewPhoto.image = [UIImage imageWithCGImage:[asset thumbnail]];
 }
 

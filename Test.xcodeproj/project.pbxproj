@@ -19,6 +19,9 @@
 		11B3CFAA1B8A567900A176AC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B3CFA91B8A567900A176AC /* AssetsLibrary.framework */; };
 		11B3CFAD1B8A5D3200A176AC /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3CFAC1B8A5D3200A176AC /* PhotoCollectionViewCell.m */; };
 		11B3CFAF1B8A5DA000A176AC /* PhotoCollectionViewCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B3CFAE1B8A5DA000A176AC /* PhotoCollectionViewCell_iPhone.xib */; };
+		11B3CFB21B8A690B00A176AC /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3CFB11B8A690B00A176AC /* PhotoDetailViewController.m */; };
+		11B3CFB51B8A6AA400A176AC /* PhotoDetailViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3CFB41B8A6AA400A176AC /* PhotoDetailViewController_iPhone.m */; };
+		11B3CFB71B8A6ADD00A176AC /* PhotoDetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B3CFB61B8A6ADD00A176AC /* PhotoDetailViewController_iPhone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,11 @@
 		11B3CFAB1B8A5D3200A176AC /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		11B3CFAC1B8A5D3200A176AC /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		11B3CFAE1B8A5DA000A176AC /* PhotoCollectionViewCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCollectionViewCell_iPhone.xib; sourceTree = "<group>"; };
+		11B3CFB01B8A690B00A176AC /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
+		11B3CFB11B8A690B00A176AC /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
+		11B3CFB31B8A6AA400A176AC /* PhotoDetailViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController_iPhone.h; sourceTree = "<group>"; };
+		11B3CFB41B8A6AA400A176AC /* PhotoDetailViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController_iPhone.m; sourceTree = "<group>"; };
+		11B3CFB61B8A6ADD00A176AC /* PhotoDetailViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoDetailViewController_iPhone.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +209,8 @@
 				11B3CF9D1B8A4F4800A176AC /* iPhone */,
 				11B3CF9E1B8A4F8300A176AC /* PhotoViewController.h */,
 				11B3CF9F1B8A4F8300A176AC /* PhotoViewController.m */,
+				11B3CFB01B8A690B00A176AC /* PhotoDetailViewController.h */,
+				11B3CFB11B8A690B00A176AC /* PhotoDetailViewController.m */,
 				11B3CFAB1B8A5D3200A176AC /* PhotoCollectionViewCell.h */,
 				11B3CFAC1B8A5D3200A176AC /* PhotoCollectionViewCell.m */,
 			);
@@ -212,6 +222,8 @@
 			children = (
 				11B3CFA11B8A4FF400A176AC /* PhotoViewController_iPhone.h */,
 				11B3CFA21B8A4FF400A176AC /* PhotoViewController_iPhone.m */,
+				11B3CFB31B8A6AA400A176AC /* PhotoDetailViewController_iPhone.h */,
+				11B3CFB41B8A6AA400A176AC /* PhotoDetailViewController_iPhone.m */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -236,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				11B3CFA71B8A506C00A176AC /* PhotoViewController_iPhone.xib */,
+				11B3CFB61B8A6ADD00A176AC /* PhotoDetailViewController_iPhone.xib */,
 				11B3CFAE1B8A5DA000A176AC /* PhotoCollectionViewCell_iPhone.xib */,
 			);
 			path = iPhone;
@@ -324,6 +337,7 @@
 				11B3CFA81B8A506C00A176AC /* PhotoViewController_iPhone.xib in Resources */,
 				11B3CFAF1B8A5DA000A176AC /* PhotoCollectionViewCell_iPhone.xib in Resources */,
 				11B3CF961B8A4A0100A176AC /* Media.xcassets in Resources */,
+				11B3CFB71B8A6ADD00A176AC /* PhotoDetailViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,8 +355,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B3CFB51B8A6AA400A176AC /* PhotoDetailViewController_iPhone.m in Sources */,
 				11B3CFAD1B8A5D3200A176AC /* PhotoCollectionViewCell.m in Sources */,
 				11B3CF9A1B8A4B1800A176AC /* MainController.m in Sources */,
+				11B3CFB21B8A690B00A176AC /* PhotoDetailViewController.m in Sources */,
 				11B3CF721B8978D000A176AC /* ViewController.m in Sources */,
 				11B3CFA31B8A4FF400A176AC /* PhotoViewController_iPhone.m in Sources */,
 				11B3CF6F1B8978D000A176AC /* AppDelegate.m in Sources */,

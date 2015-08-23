@@ -8,6 +8,7 @@
 
 #import "PhotoViewController.h"
 #import "PhotoCollectionViewCell.h"
+#import "PhotoDetailViewController.h"
 
 @interface PhotoViewController ()
 
@@ -76,7 +77,7 @@
 #pragma mark Actions
 
 #pragma mark -
-#pragma mark UICollectionView
+#pragma mark UICollectionView Delegate
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
@@ -94,6 +95,15 @@
     cell.asset = list[indexPath.row];
     
     return cell;
+}
+
+- (void) collectionView:(UICollectionView *)_collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    PhotoDetailViewController *controller = [MainController getViewController:@"PhotoDetailViewController"];
+    controller.asset = list[indexPath.row];
+    
+    [self.navigationController pushViewController:controller animated:YES];
+    [_collectionView deselectItemAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark -

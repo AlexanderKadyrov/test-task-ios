@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoDetailViewController_iPhone">
+            <connections>
+                <outlet property="imageViewPhoto" destination="9ZE-tZ-dVv" id="PZg-Wv-ZxL"/>
+                <outlet property="view" destination="YAI-ha-4R9" id="EhL-Tg-Gtd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="YAI-ha-4R9">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ZE-tZ-dVv" userLabel="imageViewPhoto">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="530"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HxN-CW-q5f" userLabel="viewTool">
+                    <rect key="frame" x="0.0" y="530" width="320" height="38"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xB-2V-8cd">
+                            <rect key="frame" x="266" y="4" width="46" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="8ti-qq-9GJ"/>
+                                <constraint firstAttribute="width" constant="46" id="RkR-DC-2kp"/>
+                            </constraints>
+                            <state key="normal" title="Button">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sx-CJ-lhw">
+                            <rect key="frame" x="8" y="4" width="46" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="46" id="R55-3D-JMN"/>
+                                <constraint firstAttribute="height" constant="30" id="lnW-EC-Mwb"/>
+                            </constraints>
+                            <state key="normal" title="Button">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="2xB-2V-8cd" secondAttribute="trailing" constant="8" id="6mP-al-RXo"/>
+                        <constraint firstItem="3Sx-CJ-lhw" firstAttribute="leading" secondItem="HxN-CW-q5f" secondAttribute="leading" constant="8" id="E1C-jS-Ggv"/>
+                        <constraint firstAttribute="height" constant="38" id="WP6-f0-HhL"/>
+                        <constraint firstAttribute="bottom" secondItem="2xB-2V-8cd" secondAttribute="bottom" constant="4" id="esf-cK-p8T"/>
+                        <constraint firstAttribute="bottom" secondItem="3Sx-CJ-lhw" secondAttribute="bottom" constant="4" id="nTf-zn-fIu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="HxN-CW-q5f" secondAttribute="bottom" id="Lj7-HD-gq7"/>
+                <constraint firstItem="9ZE-tZ-dVv" firstAttribute="leading" secondItem="YAI-ha-4R9" secondAttribute="leading" id="MGI-lg-tit"/>
+                <constraint firstAttribute="trailing" secondItem="HxN-CW-q5f" secondAttribute="trailing" id="RuG-BV-cbg"/>
+                <constraint firstItem="9ZE-tZ-dVv" firstAttribute="top" secondItem="YAI-ha-4R9" secondAttribute="top" id="dcd-nx-p6i"/>
+                <constraint firstAttribute="bottom" secondItem="9ZE-tZ-dVv" secondAttribute="bottom" constant="38" id="fyA-YG-kE8"/>
+                <constraint firstAttribute="trailing" secondItem="9ZE-tZ-dVv" secondAttribute="trailing" id="ngV-Ik-emz"/>
+                <constraint firstItem="HxN-CW-q5f" firstAttribute="leading" secondItem="YAI-ha-4R9" secondAttribute="leading" id="zw7-iL-XRt"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="306" y="402"/>
+        </view>
+    </objects>
+</document>
