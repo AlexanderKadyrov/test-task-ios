@@ -7,6 +7,7 @@
 //
 
 #import "PhotoViewController.h"
+#import "PhotoCollectionViewCell.h"
 
 @interface PhotoViewController ()
 
@@ -37,8 +38,11 @@
 }
 
 - (void)makeItems {
-    assetsLibrary = [[ALAssetsLibrary alloc] init];
+    assetsLibrary = [MainController sharedAssetsLibrary];
     list = [[NSMutableArray alloc] init];
+    
+    UINib *nib = [UINib nibWithNibName:[NSString stringWithFormat:@"PhotoCollectionViewCell_%@", DEVICE_NAME] bundle: nil];
+    [collectionView registerNib:nib forCellWithReuseIdentifier:IDENTIFIER_CELL];
 }
 
 #pragma mark -
@@ -72,28 +76,24 @@
 #pragma mark Actions
 
 #pragma mark -
-#pragma mark Collection view data source
+#pragma mark UICollectionView
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
 
 - (NSInteger)collectionView:(UICollectionView *)_collectionView numberOfItemsInSection:(NSInteger)section {
     return list.count;
 }
 
-- (UICollectionViewCell *) collectionView:(UICollectionView *)_collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = (UICollectionViewCell *)[_collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCell" forIndexPath:indexPath];
+- (UICollectionViewCell *)collectionView:(UICollectionView *)_collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *identifier = IDENTIFIER_CELL;
     
-    //ALAsset *asset = list[indexPath.row];
-    //cell.asset = asset;
-    cell.backgroundColor = [UIColor redColor];
+    PhotoCollectionViewCell *cell = (PhotoCollectionViewCell *)[_collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    
+    cell.asset = list[indexPath.row];
     
     return cell;
-}
-
-- (CGFloat) collectionView:(UICollectionView *)_collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return 4;
-}
-
-- (CGFloat) collectionView:(UICollectionView *)_collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return 1;
 }
 
 #pragma mark -

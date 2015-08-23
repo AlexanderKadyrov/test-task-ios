@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 #import <UIKit/UIKit.h>
 #import "Constants.h"
 
@@ -16,6 +17,10 @@
 #pragma mark Singleton
 
 + (MainController *)shared;
+
+#pragma mark -
+#pragma mark AssetsLibrary
++ (ALAssetsLibrary *)sharedAssetsLibrary;
 
 #pragma mark -
 #pragma mark ViewControllers

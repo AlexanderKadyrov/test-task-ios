@@ -25,6 +25,15 @@
     return sharedController;
 }
 
++ (ALAssetsLibrary *)sharedAssetsLibrary {
+    static dispatch_once_t pred = 0;
+    static ALAssetsLibrary *library = nil;
+    dispatch_once(&pred, ^{
+        library = [[ALAssetsLibrary alloc] init];
+    });
+    return library;
+}
+
 #pragma mark -
 #pragma mark ViewControllers
 

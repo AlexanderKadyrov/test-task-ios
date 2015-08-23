@@ -10,5 +10,6 @@
 #define Test_Constants_h
 
 #define DEVICE_NAME							(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? @"iPad" : @"iPhone"
+#define IDENTIFIER_CELL                     @"identifierCell"
 
 #endif
