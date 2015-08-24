@@ -42,7 +42,7 @@
 }
 
 - (void)setItems {
-    buttonSepia.enabled = NO;
+    buttonSepia.hidden = YES;
     [self setButtonRightTitle:@"Save" selector:@selector(actionSave)];
 }
 
