@@ -9,7 +9,11 @@
 #ifndef Test_Constants_h
 #define Test_Constants_h
 
+//general
 #define DEVICE_NAME							(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? @"iPad" : @"iPhone"
 #define IDENTIFIER_CELL                     @"identifierCell"
+
+//notifications
+#define NOTIFICATION_LOAD_PHOTO             @"NOTIFICATION_LOAD_PHOTO"
 
 #endif

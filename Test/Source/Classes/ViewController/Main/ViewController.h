@@ -12,6 +12,10 @@
 
 @interface ViewController : UIViewController
 
+#pragma mark -
+#pragma mark Set Button Left
+
+- (void)setButtonRightTitle:(NSString *)title selector:(SEL)selector;
 
 @end
 

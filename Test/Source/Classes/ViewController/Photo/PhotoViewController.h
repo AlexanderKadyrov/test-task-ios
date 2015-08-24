@@ -11,8 +11,9 @@
 
 @interface PhotoViewController : ViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout> {
     IBOutlet UICollectionView *collectionView;
-    ALAssetsLibrary *assetsLibrary;
     NSMutableArray *list;
+    
+    ALAssetsLibrary *assetsLibrary;
 }
 
 @end

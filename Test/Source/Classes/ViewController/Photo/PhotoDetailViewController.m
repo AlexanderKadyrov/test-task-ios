@@ -33,7 +33,7 @@
 #pragma mark Make
 
 - (void)makeToolBar {
-    
+    [self setButtonRightTitle:@"Save" selector:@selector(actionSave)];
 }
 
 - (void)makeItems {
@@ -51,16 +51,35 @@
 #pragma mark Set
 
 - (void)setData {
-    ALAssetRepresentation *representation = [self.asset defaultRepresentation];
-    UIImage *image = [UIImage imageWithCGImage:[representation fullScreenImage] scale:[representation scale] orientation:UIImageOrientationUp];
+    ALAssetRepresentation *representation = self.asset.defaultRepresentation;
+    UIImage *image = [UIImage imageWithCGImage:[representation fullScreenImage] scale:[representation scale] orientation: UIImageOrientationUp];
     imageViewPhoto.image = image;
 }
 
 #pragma mark -
 #pragma mark Actions
 
-#pragma mark -
-#pragma mark Other
+- (IBAction)actionSetSepia {
+    CIImage *originImage = [CIImage imageWithCGImage:[imageViewPhoto.image CGImage]];
+    CIContext *context = [CIContext contextWithOptions:nil];
+    
+    CIFilter *filter = [CIFilter filterWithName:@"CISepiaTone" keysAndValues:kCIInputImageKey, originImage, @"inputIntensity", @(1), nil];
+    CIImage *outputImage = [filter outputImage];
+    
+    CGImageRef imageRef = [context createCGImage:outputImage fromRect:[outputImage extent]];
+    UIImage *imageWithFilter = [UIImage imageWithCGImage:imageRef];
+    
+    imageViewPhoto.image = imageWithFilter;
+}
+
+- (void)actionSave {
+    NSData *data = UIImagePNGRepresentation(imageViewPhoto.image);
+    
+    [self.asset writeModifiedImageDataToSavedPhotosAlbum:data metadata:self.asset.defaultRepresentation.metadata completionBlock:^(NSURL *assetURL, NSError *error) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_LOAD_PHOTO object:nil];
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+}
 
 #pragma mark -
 #pragma mark Memory managment

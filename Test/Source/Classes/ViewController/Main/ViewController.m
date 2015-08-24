@@ -19,48 +19,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.title = @"";
-    
-    [self makeToolBar];
-    
-    [self makeItems];
-    
-    [self loadData];
 }
 
 #pragma mark -
-#pragma mark Make
+#pragma mark Set Button Left
 
-- (void)makeToolBar {
-    
+- (void)setButtonRightTitle:(NSString *)title selector:(SEL)selector {
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:selector];
+    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor blackColor]];
 }
-
-- (void)makeItems {
-    
-}
-
-#pragma mark -
-#pragma mark Load
-
-- (void)loadData {
-    
-}
-
-#pragma mark -
-#pragma mark Set
-
-- (void)setData {
-    
-}
-
-#pragma mark -
-#pragma mark Actions
-
-#pragma mark -
-#pragma mark Other
 
 #pragma mark -
 #pragma mark Memory managment
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
 
 @end

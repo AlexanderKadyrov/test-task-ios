@@ -19,48 +19,44 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HxN-CW-q5f" userLabel="viewTool">
                     <rect key="frame" x="0.0" y="530" width="320" height="38"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xB-2V-8cd">
-                            <rect key="frame" x="266" y="4" width="46" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sx-CJ-lhw" userLabel="buttonSepia">
+                            <rect key="frame" x="141" y="0.0" width="39" height="38"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="30" id="8ti-qq-9GJ"/>
-                                <constraint firstAttribute="width" constant="46" id="RkR-DC-2kp"/>
+                                <constraint firstAttribute="width" constant="39" id="Onl-o6-0oe"/>
+                                <constraint firstAttribute="height" constant="38" id="zDl-9x-EHm"/>
                             </constraints>
-                            <state key="normal" title="Button">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                            <state key="normal" title="Sepia">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sx-CJ-lhw">
-                            <rect key="frame" x="8" y="4" width="46" height="30"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="46" id="R55-3D-JMN"/>
-                                <constraint firstAttribute="height" constant="30" id="lnW-EC-Mwb"/>
-                            </constraints>
-                            <state key="normal" title="Button">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
+                            <connections>
+                                <action selector="actionSetSepia" destination="-1" eventType="touchUpInside" id="lS4-me-Q6G"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="2xB-2V-8cd" secondAttribute="trailing" constant="8" id="6mP-al-RXo"/>
-                        <constraint firstItem="3Sx-CJ-lhw" firstAttribute="leading" secondItem="HxN-CW-q5f" secondAttribute="leading" constant="8" id="E1C-jS-Ggv"/>
+                        <constraint firstItem="3Sx-CJ-lhw" firstAttribute="top" secondItem="HxN-CW-q5f" secondAttribute="top" id="QtJ-JF-dRE"/>
+                        <constraint firstAttribute="bottom" secondItem="3Sx-CJ-lhw" secondAttribute="bottom" id="Snu-Ki-ZIG"/>
                         <constraint firstAttribute="height" constant="38" id="WP6-f0-HhL"/>
-                        <constraint firstAttribute="bottom" secondItem="2xB-2V-8cd" secondAttribute="bottom" constant="4" id="esf-cK-p8T"/>
-                        <constraint firstAttribute="bottom" secondItem="3Sx-CJ-lhw" secondAttribute="bottom" constant="4" id="nTf-zn-fIu"/>
+                        <constraint firstAttribute="centerX" secondItem="3Sx-CJ-lhw" secondAttribute="centerX" id="vsY-1A-VQ6"/>
                     </constraints>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ZE-tZ-dVv" userLabel="imageViewPhoto">
-                    <rect key="frame" x="0.0" y="53" width="320" height="300"/>
+                    <rect key="frame" x="0.0" y="134" width="320" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="3kT-Z4-WnM"/>
+                    </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="9ZE-tZ-dVv" firstAttribute="leading" secondItem="YAI-ha-4R9" secondAttribute="leading" id="EDo-Do-G04"/>
                 <constraint firstAttribute="bottom" secondItem="HxN-CW-q5f" secondAttribute="bottom" id="Lj7-HD-gq7"/>
-                <constraint firstItem="9ZE-tZ-dVv" firstAttribute="leading" secondItem="YAI-ha-4R9" secondAttribute="leading" id="MGI-lg-tit"/>
                 <constraint firstAttribute="trailing" secondItem="HxN-CW-q5f" secondAttribute="trailing" id="RuG-BV-cbg"/>
-                <constraint firstItem="9ZE-tZ-dVv" firstAttribute="top" secondItem="YAI-ha-4R9" secondAttribute="top" constant="53" id="dcd-nx-p6i"/>
-                <constraint firstAttribute="bottom" secondItem="9ZE-tZ-dVv" secondAttribute="bottom" constant="215" id="fyA-YG-kE8"/>
-                <constraint firstAttribute="trailing" secondItem="9ZE-tZ-dVv" secondAttribute="trailing" id="ngV-Ik-emz"/>
+                <constraint firstAttribute="trailing" secondItem="9ZE-tZ-dVv" secondAttribute="trailing" id="egh-I7-1En"/>
+                <constraint firstAttribute="centerY" secondItem="9ZE-tZ-dVv" secondAttribute="centerY" id="sDi-jN-Xw6"/>
                 <constraint firstItem="HxN-CW-q5f" firstAttribute="leading" secondItem="YAI-ha-4R9" secondAttribute="leading" id="zw7-iL-XRt"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

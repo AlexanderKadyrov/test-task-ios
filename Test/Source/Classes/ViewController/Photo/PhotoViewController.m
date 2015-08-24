@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadData) name:NOTIFICATION_LOAD_PHOTO object:nil];
+    
     self.title = @"Photos";
     
     [self makeToolBar];
@@ -39,8 +41,8 @@
 }
 
 - (void)makeItems {
-    assetsLibrary = [MainController sharedAssetsLibrary];
     list = [[NSMutableArray alloc] init];
+    assetsLibrary = [MainController sharedAssetsLibrary];
     
     UINib *nib = [UINib nibWithNibName:[NSString stringWithFormat:@"PhotoCollectionViewCell_%@", DEVICE_NAME] bundle: nil];
     [collectionView registerNib:nib forCellWithReuseIdentifier:IDENTIFIER_CELL];
@@ -50,6 +52,8 @@
 #pragma mark Load
 
 - (void)loadData {
+    [list removeAllObjects];
+    
     [assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
         
         [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
@@ -72,9 +76,6 @@
 - (void)setData {
     [collectionView reloadData];
 }
-
-#pragma mark -
-#pragma mark Actions
 
 #pragma mark -
 #pragma mark UICollectionView Delegate
@@ -107,9 +108,14 @@
 }
 
 #pragma mark -
-#pragma mark Other
-
-#pragma mark -
 #pragma mark Memory managment
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 @end
