@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0cr-hp-A9M" userLabel="collectionView">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="8" y="8" width="304" height="552"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gGu-F6-m1p">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -31,10 +31,10 @@
                 </collectionView>
             </subviews>
             <constraints>
-                <constraint firstItem="0cr-hp-A9M" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CRL-ay-NBd"/>
-                <constraint firstAttribute="bottom" secondItem="0cr-hp-A9M" secondAttribute="bottom" id="P6H-Lf-6WH"/>
-                <constraint firstAttribute="trailing" secondItem="0cr-hp-A9M" secondAttribute="trailing" id="PQW-7A-7co"/>
-                <constraint firstItem="0cr-hp-A9M" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bxl-fc-JdY"/>
+                <constraint firstItem="0cr-hp-A9M" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="CRL-ay-NBd"/>
+                <constraint firstAttribute="bottom" secondItem="0cr-hp-A9M" secondAttribute="bottom" constant="8" id="P6H-Lf-6WH"/>
+                <constraint firstAttribute="trailing" secondItem="0cr-hp-A9M" secondAttribute="trailing" constant="8" id="PQW-7A-7co"/>
+                <constraint firstItem="0cr-hp-A9M" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="bxl-fc-JdY"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
