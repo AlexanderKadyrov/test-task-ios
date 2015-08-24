@@ -42,7 +42,9 @@
 }
 
 - (void)setItems {
-    buttonSepia.hidden = YES;
+    buttonSepia.enabled = NO;
+    buttonSepia.backgroundColor = [UIColor lightGrayColor];
+    
     [self setButtonRightTitle:@"Save" selector:@selector(actionSave)];
 }
 
