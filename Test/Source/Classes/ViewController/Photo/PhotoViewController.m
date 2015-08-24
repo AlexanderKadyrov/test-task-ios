@@ -26,8 +26,6 @@
     
     self.title = @"Photos";
     
-    [self makeToolBar];
-    
     [self makeItems];
     
     [self loadData];
@@ -35,10 +33,6 @@
 
 #pragma mark -
 #pragma mark Make
-
-- (void)makeToolBar {
-    
-}
 
 - (void)makeItems {
     list = [[NSMutableArray alloc] init];

@@ -22,22 +22,7 @@
     
     self.title = @"Detail";
     
-    [self makeToolBar];
-    
-    [self makeItems];
-    
     [self loadData];
-}
-
-#pragma mark -
-#pragma mark Make
-
-- (void)makeToolBar {
-    [self setButtonRightTitle:@"Save" selector:@selector(actionSave)];
-}
-
-- (void)makeItems {
-    
 }
 
 #pragma mark -
@@ -56,6 +41,11 @@
     imageViewPhoto.image = image;
 }
 
+- (void)setItems {
+    buttonSepia.enabled = NO;
+    [self setButtonRightTitle:@"Save" selector:@selector(actionSave)];
+}
+
 #pragma mark -
 #pragma mark Actions
 
@@ -70,6 +60,8 @@
     UIImage *imageWithFilter = [UIImage imageWithCGImage:imageRef];
     
     imageViewPhoto.image = imageWithFilter;
+    
+    [self setItems];
 }
 
 - (void)actionSave {

@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoDetailViewController_iPhone">
             <connections>
+                <outlet property="buttonSepia" destination="3Sx-CJ-lhw" id="CQb-as-qCE"/>
                 <outlet property="imageViewPhoto" destination="9ZE-tZ-dVv" id="PZg-Wv-ZxL"/>
                 <outlet property="view" destination="YAI-ha-4R9" id="EhL-Tg-Gtd"/>
             </connections>
