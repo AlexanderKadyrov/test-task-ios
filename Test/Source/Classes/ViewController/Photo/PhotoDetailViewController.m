@@ -61,7 +61,7 @@
 
 - (IBAction)actionSetSepia {
     CIImage *originImage = [CIImage imageWithCGImage:[imageViewPhoto.image CGImage]];
-    CIContext *context = [CIContext contextWithOptions:nil];
+    CIContext *context = [CIContext contextWithOptions:@{kCIContextUseSoftwareRenderer:@YES}];
     
     CIFilter *filter = [CIFilter filterWithName:@"CISepiaTone" keysAndValues:kCIInputImageKey, originImage, @"inputIntensity", @(1), nil];
     CIImage *outputImage = [filter outputImage];

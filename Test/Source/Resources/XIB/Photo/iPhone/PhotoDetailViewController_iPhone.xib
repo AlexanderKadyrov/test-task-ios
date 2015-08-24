@@ -17,19 +17,25 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HxN-CW-q5f" userLabel="viewTool">
-                    <rect key="frame" x="0.0" y="530" width="320" height="38"/>
+                    <rect key="frame" x="0.0" y="522" width="320" height="46"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sx-CJ-lhw" userLabel="buttonSepia">
-                            <rect key="frame" x="141" y="0.0" width="39" height="38"/>
+                            <rect key="frame" x="8" y="0.0" width="304" height="38"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="39" id="Onl-o6-0oe"/>
+                                <constraint firstAttribute="width" constant="304" id="Onl-o6-0oe"/>
                                 <constraint firstAttribute="height" constant="38" id="zDl-9x-EHm"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                             <state key="normal" title="Sepia">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="actionSetSepia" destination="-1" eventType="touchUpInside" id="lS4-me-Q6G"/>
                             </connections>
@@ -38,8 +44,8 @@
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="3Sx-CJ-lhw" firstAttribute="top" secondItem="HxN-CW-q5f" secondAttribute="top" id="QtJ-JF-dRE"/>
-                        <constraint firstAttribute="bottom" secondItem="3Sx-CJ-lhw" secondAttribute="bottom" id="Snu-Ki-ZIG"/>
-                        <constraint firstAttribute="height" constant="38" id="WP6-f0-HhL"/>
+                        <constraint firstAttribute="bottom" secondItem="3Sx-CJ-lhw" secondAttribute="bottom" constant="8" id="Snu-Ki-ZIG"/>
+                        <constraint firstAttribute="height" constant="46" id="WP6-f0-HhL"/>
                         <constraint firstAttribute="centerX" secondItem="3Sx-CJ-lhw" secondAttribute="centerX" id="vsY-1A-VQ6"/>
                     </constraints>
                 </view>
