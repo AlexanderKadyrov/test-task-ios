@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoDetailViewController_iPhone">
             <connections>
-                <outlet property="buttonSepia" destination="3Sx-CJ-lhw" id="CQb-as-qCE"/>
                 <outlet property="imageViewPhoto" destination="9ZE-tZ-dVv" id="PZg-Wv-ZxL"/>
                 <outlet property="view" destination="YAI-ha-4R9" id="EhL-Tg-Gtd"/>
             </connections>
@@ -17,39 +16,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HxN-CW-q5f" userLabel="viewTool">
-                    <rect key="frame" x="0.0" y="522" width="320" height="46"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sx-CJ-lhw" userLabel="buttonSepia">
-                            <rect key="frame" x="8" y="0.0" width="304" height="38"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="304" id="Onl-o6-0oe"/>
-                                <constraint firstAttribute="height" constant="38" id="zDl-9x-EHm"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                            <state key="normal" title="Sepia">
-                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="4"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="actionSetSepia" destination="-1" eventType="touchUpInside" id="lS4-me-Q6G"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstItem="3Sx-CJ-lhw" firstAttribute="top" secondItem="HxN-CW-q5f" secondAttribute="top" id="QtJ-JF-dRE"/>
-                        <constraint firstAttribute="bottom" secondItem="3Sx-CJ-lhw" secondAttribute="bottom" constant="8" id="Snu-Ki-ZIG"/>
-                        <constraint firstAttribute="height" constant="46" id="WP6-f0-HhL"/>
-                        <constraint firstAttribute="centerX" secondItem="3Sx-CJ-lhw" secondAttribute="centerX" id="vsY-1A-VQ6"/>
-                    </constraints>
-                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ZE-tZ-dVv" userLabel="imageViewPhoto">
                     <rect key="frame" x="0.0" y="134" width="320" height="300"/>
                     <constraints>
@@ -60,11 +26,8 @@
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="9ZE-tZ-dVv" firstAttribute="leading" secondItem="YAI-ha-4R9" secondAttribute="leading" id="EDo-Do-G04"/>
-                <constraint firstAttribute="bottom" secondItem="HxN-CW-q5f" secondAttribute="bottom" id="Lj7-HD-gq7"/>
-                <constraint firstAttribute="trailing" secondItem="HxN-CW-q5f" secondAttribute="trailing" id="RuG-BV-cbg"/>
                 <constraint firstAttribute="trailing" secondItem="9ZE-tZ-dVv" secondAttribute="trailing" id="egh-I7-1En"/>
                 <constraint firstAttribute="centerY" secondItem="9ZE-tZ-dVv" secondAttribute="centerY" id="sDi-jN-Xw6"/>
-                <constraint firstItem="HxN-CW-q5f" firstAttribute="leading" secondItem="YAI-ha-4R9" secondAttribute="leading" id="zw7-iL-XRt"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="306" y="402"/>

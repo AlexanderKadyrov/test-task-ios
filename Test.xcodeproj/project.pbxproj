@@ -22,6 +22,9 @@
 		11B3CFB21B8A690B00A176AC /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3CFB11B8A690B00A176AC /* PhotoDetailViewController.m */; };
 		11B3CFB51B8A6AA400A176AC /* PhotoDetailViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3CFB41B8A6AA400A176AC /* PhotoDetailViewController_iPhone.m */; };
 		11B3CFB71B8A6ADD00A176AC /* PhotoDetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B3CFB61B8A6ADD00A176AC /* PhotoDetailViewController_iPhone.xib */; };
+		11B3CFBB1B8BCDF200A176AC /* BitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3CFBA1B8BCDF200A176AC /* BitViewController.m */; };
+		11B3CFBF1B8BD05200A176AC /* BitViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3CFBE1B8BD05200A176AC /* BitViewController_iPhone.m */; };
+		11B3CFC31B8BD0B400A176AC /* BitViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B3CFC21B8BD0B400A176AC /* BitViewController_iPhone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,11 @@
 		11B3CFB31B8A6AA400A176AC /* PhotoDetailViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController_iPhone.h; sourceTree = "<group>"; };
 		11B3CFB41B8A6AA400A176AC /* PhotoDetailViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController_iPhone.m; sourceTree = "<group>"; };
 		11B3CFB61B8A6ADD00A176AC /* PhotoDetailViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoDetailViewController_iPhone.xib; sourceTree = "<group>"; };
+		11B3CFB91B8BCDF200A176AC /* BitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitViewController.h; sourceTree = "<group>"; };
+		11B3CFBA1B8BCDF200A176AC /* BitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitViewController.m; sourceTree = "<group>"; };
+		11B3CFBD1B8BD05200A176AC /* BitViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitViewController_iPhone.h; sourceTree = "<group>"; };
+		11B3CFBE1B8BD05200A176AC /* BitViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitViewController_iPhone.m; sourceTree = "<group>"; };
+		11B3CFC21B8BD0B400A176AC /* BitViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BitViewController_iPhone.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +168,7 @@
 		11B3CF911B8979B500A176AC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				11B3CFB81B8BCDCD00A176AC /* Bit */,
 				11B3CF9C1B8A4F1E00A176AC /* Photo */,
 				11B3CF921B8979DD00A176AC /* Main */,
 			);
@@ -231,6 +240,7 @@
 		11B3CFA41B8A500C00A176AC /* XIB */ = {
 			isa = PBXGroup;
 			children = (
+				11B3CFC01B8BD06E00A176AC /* Bit */,
 				11B3CFA51B8A503300A176AC /* Photo */,
 			);
 			path = XIB;
@@ -250,6 +260,41 @@
 				11B3CFA71B8A506C00A176AC /* PhotoViewController_iPhone.xib */,
 				11B3CFB61B8A6ADD00A176AC /* PhotoDetailViewController_iPhone.xib */,
 				11B3CFAE1B8A5DA000A176AC /* PhotoCollectionViewCell_iPhone.xib */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		11B3CFB81B8BCDCD00A176AC /* Bit */ = {
+			isa = PBXGroup;
+			children = (
+				11B3CFBC1B8BCFFE00A176AC /* iPhone */,
+				11B3CFB91B8BCDF200A176AC /* BitViewController.h */,
+				11B3CFBA1B8BCDF200A176AC /* BitViewController.m */,
+			);
+			path = Bit;
+			sourceTree = "<group>";
+		};
+		11B3CFBC1B8BCFFE00A176AC /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				11B3CFBD1B8BD05200A176AC /* BitViewController_iPhone.h */,
+				11B3CFBE1B8BD05200A176AC /* BitViewController_iPhone.m */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		11B3CFC01B8BD06E00A176AC /* Bit */ = {
+			isa = PBXGroup;
+			children = (
+				11B3CFC11B8BD07F00A176AC /* iPhone */,
+			);
+			path = Bit;
+			sourceTree = "<group>";
+		};
+		11B3CFC11B8BD07F00A176AC /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				11B3CFC21B8BD0B400A176AC /* BitViewController_iPhone.xib */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -335,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11B3CFA81B8A506C00A176AC /* PhotoViewController_iPhone.xib in Resources */,
+				11B3CFC31B8BD0B400A176AC /* BitViewController_iPhone.xib in Resources */,
 				11B3CFAF1B8A5DA000A176AC /* PhotoCollectionViewCell_iPhone.xib in Resources */,
 				11B3CF961B8A4A0100A176AC /* Media.xcassets in Resources */,
 				11B3CFB71B8A6ADD00A176AC /* PhotoDetailViewController_iPhone.xib in Resources */,
@@ -357,7 +403,9 @@
 			files = (
 				11B3CFB51B8A6AA400A176AC /* PhotoDetailViewController_iPhone.m in Sources */,
 				11B3CFAD1B8A5D3200A176AC /* PhotoCollectionViewCell.m in Sources */,
+				11B3CFBB1B8BCDF200A176AC /* BitViewController.m in Sources */,
 				11B3CF9A1B8A4B1800A176AC /* MainController.m in Sources */,
+				11B3CFBF1B8BD05200A176AC /* BitViewController_iPhone.m in Sources */,
 				11B3CFB21B8A690B00A176AC /* PhotoDetailViewController.m in Sources */,
 				11B3CF721B8978D000A176AC /* ViewController.m in Sources */,
 				11B3CFA31B8A4FF400A176AC /* PhotoViewController_iPhone.m in Sources */,

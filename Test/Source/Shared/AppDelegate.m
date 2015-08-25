@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MainController.h"
 #import "PhotoViewController.h"
+#import "BitViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,12 +19,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.tabBarController = [[UITabBarController alloc] init];
     
-    PhotoViewController *controller = [MainController getViewController:@"PhotoViewController"];
+    PhotoViewController *controllerOne = [MainController getViewController:@"PhotoViewController"];
+    controllerOne.title = @"Photos";
+    UINavigationController *navigationControllerOne = [[UINavigationController alloc] initWithRootViewController:controllerOne];
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:controller];
+    BitViewController *controllerTwo = [MainController getViewController:@"BitViewController"];
+    controllerTwo.title = @"Zero Bits";
+    UINavigationController *navigationControllerTwo = [[UINavigationController alloc] initWithRootViewController:controllerTwo];
+    
+    self.tabBarController.viewControllers = @[navigationControllerOne, navigationControllerTwo];
+    
+    self.window.rootViewController = self.tabBarController;
     
     [self.window makeKeyAndVisible];
     

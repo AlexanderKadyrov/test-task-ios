@@ -22,14 +22,16 @@
     
     self.title = @"Detail";
     
-    [self loadData];
+    [self makeToolBar];
+    
+    [self setData];
 }
 
 #pragma mark -
-#pragma mark Load
+#pragma mark Make
 
-- (void)loadData {
-    [self setData];
+- (void)makeToolBar {
+    [self setButtonRightTitle:@"Sepia" selector:@selector(actionSetSepia)];
 }
 
 #pragma mark -
@@ -41,17 +43,10 @@
     imageViewPhoto.image = image;
 }
 
-- (void)setItems {
-    buttonSepia.enabled = NO;
-    buttonSepia.backgroundColor = [UIColor lightGrayColor];
-    
-    [self setButtonRightTitle:@"Save" selector:@selector(actionSave)];
-}
-
 #pragma mark -
 #pragma mark Actions
 
-- (IBAction)actionSetSepia {
+- (void)actionSetSepia {
     CIImage *originImage = [CIImage imageWithCGImage:[imageViewPhoto.image CGImage]];
     CIContext *context = [CIContext contextWithOptions:@{kCIContextUseSoftwareRenderer:@YES}];
     
@@ -63,7 +58,7 @@
     
     imageViewPhoto.image = imageWithFilter;
     
-    [self setItems];
+    [self setButtonRightTitle:@"Save" selector:@selector(actionSave)];
 }
 
 - (void)actionSave {

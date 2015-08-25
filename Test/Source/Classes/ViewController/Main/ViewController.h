@@ -17,5 +17,10 @@
 
 - (void)setButtonRightTitle:(NSString *)title selector:(SEL)selector;
 
+#pragma mark -
+#pragma mark Message
+
+- (void)showMessageTitle:(NSString *)title message:(NSString *)message;
+
 @end
 

@@ -10,7 +10,6 @@
 
 @interface PhotoDetailViewController : ViewController {
     IBOutlet UIImageView *imageViewPhoto;
-    IBOutlet UIButton *buttonSepia;
 }
 
 @property (nonatomic, strong) ALAsset *asset;

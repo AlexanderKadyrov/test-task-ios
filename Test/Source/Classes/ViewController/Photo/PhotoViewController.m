@@ -24,8 +24,6 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadData) name:NOTIFICATION_LOAD_PHOTO object:nil];
     
-    self.title = @"Photos";
-    
     [self makeItems];
     
     [self loadData];
@@ -57,18 +55,11 @@
             }
         }];
         
-        [self setData];
+        [collectionView reloadData];
         
     } failureBlock:^(NSError *error) {
         NSLog(@"Error - %@", error.localizedDescription);
     }];
-}
-
-#pragma mark -
-#pragma mark Set
-
-- (void)setData {
-    [collectionView reloadData];
 }
 
 #pragma mark -

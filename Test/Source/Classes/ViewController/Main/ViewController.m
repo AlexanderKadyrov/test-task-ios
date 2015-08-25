@@ -30,6 +30,15 @@
 }
 
 #pragma mark -
+#pragma mark Message
+
+- (void)showMessageTitle:(NSString *)title message:(NSString *)message {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    
+    [alert show];
+}
+
+#pragma mark -
 #pragma mark Memory managment
 
 - (void)didReceiveMemoryWarning {
