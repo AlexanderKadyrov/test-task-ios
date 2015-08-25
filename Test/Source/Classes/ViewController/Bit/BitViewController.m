@@ -60,6 +60,13 @@
 }
 
 #pragma mark -
+#pragma mark Other
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [textFieldString resignFirstResponder];
+}
+
+#pragma mark -
 #pragma mark Memory managment
 
 - (void)didReceiveMemoryWarning {

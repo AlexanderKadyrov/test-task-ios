@@ -10,6 +10,7 @@
 #import "MainController.h"
 #import "PhotoViewController.h"
 #import "BitViewController.h"
+#import "ArrayViewController.h"
 
 @interface AppDelegate ()
 
@@ -30,7 +31,11 @@
     controllerTwo.title = @"Zero Bits";
     UINavigationController *navigationControllerTwo = [[UINavigationController alloc] initWithRootViewController:controllerTwo];
     
-    self.tabBarController.viewControllers = @[navigationControllerOne, navigationControllerTwo];
+    ArrayViewController *controllerThree = [MainController getViewController:@"ArrayViewController"];
+    controllerThree.title = @"Array";
+    UINavigationController *navigationControllerThree = [[UINavigationController alloc] initWithRootViewController:controllerThree];
+    
+    self.tabBarController.viewControllers = @[navigationControllerOne, navigationControllerTwo, navigationControllerThree];
     
     self.window.rootViewController = self.tabBarController;
     
