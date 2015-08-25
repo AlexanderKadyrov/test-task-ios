@@ -73,7 +73,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="actionSearchElement" destination="-1" eventType="touchUpInside" id="rdo-2D-Y0d"/>
+                        <action selector="actionSearchDuplicateValue" destination="-1" eventType="touchUpInside" id="GN5-Fr-Js0"/>
                     </connections>
                 </button>
             </subviews>

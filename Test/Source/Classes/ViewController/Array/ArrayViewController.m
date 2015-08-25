@@ -57,7 +57,7 @@
     [textFieldCountDigit resignFirstResponder];
 }
 
-- (IBAction)actionSearchElement {
+- (IBAction)actionSearchDuplicateValue {
     if (!list.count) {
         [self showMessageTitle:@"Attention" message:@"Empty list"];
         return;
