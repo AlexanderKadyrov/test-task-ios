@@ -8,9 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainController.h"
-#import "PhotoViewController.h"
-#import "BitViewController.h"
-#import "ArrayViewController.h"
+#import "MusicViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,24 +18,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.tabBarController = [[UITabBarController alloc] init];
     
-    PhotoViewController *controllerOne = [MainController getViewController:@"PhotoViewController"];
-    controllerOne.title = @"Photos";
-    UINavigationController *navigationControllerOne = [[UINavigationController alloc] initWithRootViewController:controllerOne];
+    MusicViewController *controller = [MainController getViewController:@"MusicViewController"];
     
-    BitViewController *controllerTwo = [MainController getViewController:@"BitViewController"];
-    controllerTwo.title = @"Zero Bits";
-    UINavigationController *navigationControllerTwo = [[UINavigationController alloc] initWithRootViewController:controllerTwo];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
     
-    ArrayViewController *controllerThree = [MainController getViewController:@"ArrayViewController"];
-    controllerThree.title = @"Array";
-    UINavigationController *navigationControllerThree = [[UINavigationController alloc] initWithRootViewController:controllerThree];
-    
-    self.tabBarController.viewControllers = @[navigationControllerOne, navigationControllerTwo, navigationControllerThree];
-    
-    self.window.rootViewController = self.tabBarController;
+    self.window.rootViewController = navigationController;
     
     [self.window makeKeyAndVisible];
     
